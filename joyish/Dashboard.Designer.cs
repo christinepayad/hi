@@ -34,26 +34,29 @@
             // 
             // btnRegister
             // 
-            btnRegister.Location = new Point(30, 46);
+            btnRegister.BackColor = SystemColors.ActiveBorder;
+            btnRegister.Location = new Point(31, 147);
             btnRegister.Name = "btnRegister";
-            btnRegister.Size = new Size(406, 128);
+            btnRegister.Size = new Size(331, 102);
             btnRegister.TabIndex = 0;
             btnRegister.Text = "REGISTER";
-            btnRegister.UseVisualStyleBackColor = true;
+            btnRegister.UseVisualStyleBackColor = false;
             // 
             // btnStudentList
             // 
-            btnStudentList.Location = new Point(30, 193);
+            btnStudentList.BackColor = SystemColors.ActiveBorder;
+            btnStudentList.Location = new Point(396, 147);
             btnStudentList.Name = "btnStudentList";
-            btnStudentList.Size = new Size(406, 127);
+            btnStudentList.Size = new Size(310, 102);
             btnStudentList.TabIndex = 1;
             btnStudentList.Text = "STUDENT LIST";
-            btnStudentList.UseVisualStyleBackColor = true;
+            btnStudentList.UseVisualStyleBackColor = false;
             // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ButtonFace;
             ClientSize = new Size(799, 537);
             Controls.Add(btnStudentList);
             Controls.Add(btnRegister);

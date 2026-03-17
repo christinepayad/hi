@@ -34,7 +34,7 @@
             btnRefresh = new Button();
             label2 = new Label();
             lblUpdateStudent = new Label();
-            dataGridView1 = new DataGridView();
+            dgvStudents = new DataGridView();
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
@@ -48,7 +48,7 @@
             txtAge = new TextBox();
             btnSaveRecord = new Button();
             btnDeleteRecord = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvStudents).BeginInit();
             SuspendLayout();
             // 
             // lblStudentMasterlist
@@ -75,6 +75,7 @@
             btnSearch.TabIndex = 2;
             btnSearch.Text = "SEARCH";
             btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
             // 
             // btnRefresh
             // 
@@ -84,6 +85,7 @@
             btnRefresh.TabIndex = 3;
             btnRefresh.Text = "REFRESH";
             btnRefresh.UseVisualStyleBackColor = true;
+            btnRefresh.Click += btnRefresh_Click;
             // 
             // label2
             // 
@@ -103,13 +105,14 @@
             lblUpdateStudent.TabIndex = 5;
             lblUpdateStudent.Text = "UPDATE STUDENT INFORMATION";
             // 
-            // dataGridView1
+            // dgvStudents
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(22, 95);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(337, 270);
-            dataGridView1.TabIndex = 6;
+            dgvStudents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvStudents.Location = new Point(49, 104);
+            dgvStudents.Name = "dgvStudents";
+            dgvStudents.Size = new Size(337, 270);
+            dgvStudents.TabIndex = 6;
+            dgvStudents.CellClick += dgvStudents_CellClick;
             // 
             // label4
             // 
@@ -208,6 +211,7 @@
             btnSaveRecord.TabIndex = 18;
             btnSaveRecord.Text = "SAVE RECORD";
             btnSaveRecord.UseVisualStyleBackColor = true;
+            btnSaveRecord.Click += btnSaveRecord_Click;
             // 
             // btnDeleteRecord
             // 
@@ -217,6 +221,7 @@
             btnDeleteRecord.TabIndex = 19;
             btnDeleteRecord.Text = "DELETE RECORD";
             btnDeleteRecord.UseVisualStyleBackColor = true;
+            btnDeleteRecord.Click += btnDeleteRecord_Click;
             // 
             // StudentList
             // 
@@ -236,7 +241,7 @@
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvStudents);
             Controls.Add(lblUpdateStudent);
             Controls.Add(label2);
             Controls.Add(btnRefresh);
@@ -245,7 +250,8 @@
             Controls.Add(lblStudentMasterlist);
             Name = "StudentList";
             Text = "StudentList";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += StudentList_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvStudents).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -258,7 +264,7 @@
         private Button btnRefresh;
         private Label label2;
         private Label lblUpdateStudent;
-        private DataGridView dataGridView1;
+        private DataGridView dgvStudents;
         private Label label4;
         private Label label5;
         private Label label6;
